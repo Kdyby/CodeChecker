@@ -346,7 +346,7 @@ $checker->tasks[] = function ($s) {
 
 // indentation and tabs checker
 $checker->tasks[] = function ($s) {
-	if ($this->is('php,phpt,css,less,js,json,neon')) {
+	if ($this->is('php,phpt,css,less,js,json,neon') && strpos($s, "\t") !== FALSE) {
 		$orig = $s;
 		if ($this->is('php,phpt')) { // remove spaces from strings
 			$res = '';
