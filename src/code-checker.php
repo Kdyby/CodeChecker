@@ -57,8 +57,11 @@ if ($cmd->isEmpty()) {
 
 
 
-class CodeChecker extends Nette\Object
+class CodeChecker
 {
+
+	use Nette\SmartObject;
+
 	public $tasks = [];
 
 	public $readOnly = FALSE;
